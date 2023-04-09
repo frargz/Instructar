@@ -1,0 +1,204 @@
+<!-- Copyright (c) 2020 8th Wall, Inc. -->
+<!-- body.html is optional; elements will be added to your html body after app.js is loaded. -->
+<!-- Slider main container -->
+
+
+<div id="forwardbutton">
+  <span class="iconf"></span>
+</div>
+
+<!-- <div id="search"></div> -->
+
+<div id="backwardbutton">
+  <span class="iconb"></span>
+</div>
+
+<div id="instructions">
+  <span class="instructionIcon"></span>
+  <div class="instructions-paragraphOutline"></div>
+  <div class="instructions-title">
+    <h2>bruhville</h2>
+  </div>
+  <div class="instructions-paragraph">
+    <p>w</p>
+  </div>
+</div>
+
+<div id="search">
+  <span class="searchtitle">Instructar</span>
+  <label for="myInput">Enter product name:</label>
+  <input type="text" id="myInput">
+</div>
+
+<div id="searchbutton">
+  <span class="logo"></span>
+</div>
+
+<div id="camerabutton">
+  <span class="icon"></span>
+</div>
+
+<a-scene
+  model-switch
+  xrextras-gesture-detector
+  landing-page
+  xrextras-loading
+  xrextras-runtime-error
+  xrweb="allowedDevices: any">
+
+  <!-- We can define assets here to be loaded when A-Frame initializes -->
+  <a-assets>
+    <a-asset-item id="table1" src="./assets/tablestep1.glb"></a-asset-item>
+    <a-asset-item id="table2" src="./assets/tablestep2.glb"></a-asset-item>
+    <a-asset-item id="table3" src="./assets/tablestep3.glb"></a-asset-item>
+    <a-asset-item id="table4" src="./assets/tablestep4.glb"></a-asset-item>
+    <a-asset-item id="table5" src="./assets/tablestep5.glb"></a-asset-item>
+    <a-asset-item id="table6" src="./assets/tablestep6.glb"></a-asset-item>
+    <a-asset-item id="paperairplane1" src="./assets/paperairplane1.glb"></a-asset-item>
+    <a-asset-item id="paperairplane2" src="./assets/paperairplane2.glb"></a-asset-item>
+    <a-asset-item id="paperairplane3" src="./assets/paperairplane3.glb"></a-asset-item>
+    <a-asset-item id="paperairplane4" src="./assets/paperairplane4.glb"></a-asset-item>
+    <a-asset-item id="paperairplane5" src="./assets/paperairplane5.glb"></a-asset-item>
+    <a-asset-item id="paperairplane6" src="./assets/paperairplane6.glb"></a-asset-item>
+  </a-assets>
+
+  <!-- The raycaster will emit mouse events on scene objects specified with the cantap class -->
+  <a-camera
+    id="camera"
+    position="0 8 8"
+    raycaster="objects: .cantap"
+    cursor="
+      fuse: false;
+      rayOrigin: mouse;">
+  </a-camera>
+
+  <a-entity
+      light="type: directional;
+         intensity: 0.8;
+         castShadow: true;
+         shadowMapHeight:2048;
+         shadowMapWidth:2048;
+         shadowCameraTop: 10;
+         target: #model;"
+      position="1 4.3 2.5"
+      xrextras-attach="target: model; offset: 1 15 3;"
+      shadow>
+  </a-entity>
+
+  <a-light type="ambient" intensity="1"></a-light>
+
+  <a-entity
+    id="model"
+    gltf-model="#mixamoModel"
+    class="cantap"
+    scale=".2 .2 .2"
+    xrextras-hold-drag 
+    xrextras-two-finger-rotate
+    xrextras-pinch-scalew
+    shadow>
+  </a-entity>
+
+  <a-plane id="ground" position="0 0 0" rotation="-90 0 0" width="50" height="50" material="shader: shadow" shadow></a-plane>
+</a-scene><!-- Copyright (c) 2020 8th Wall, Inc. -->
+<!-- body.html is optional; elements will be added to your html body after app.js is loaded. -->
+<!-- Slider main container -->
+
+
+<div id="forwardbutton">
+  <span class="iconf"></span>
+</div>
+
+<!-- <div id="search"></div> -->
+
+<div id="backwardbutton">
+  <span class="iconb"></span>
+</div>
+
+<div id="instructions">
+  <span class="instructionIcon"></span>
+  <div class="instructions-paragraphOutline"></div>
+  <div class="instructions-title">
+    <h2>bruhville</h2>
+  </div>
+  <div class="instructions-paragraph">
+    <p>w</p>
+  </div>
+</div>
+
+<div id="search">
+  <span class="searchtitle">Instructar</span>
+  <label for="myInput">Enter product name:</label>
+  <input type="text" id="myInput">
+</div>
+
+<div id="searchbutton">
+  <span class="logo"></span>
+</div>
+
+<div id="camerabutton">
+  <span class="icon"></span>
+</div>
+
+<a-scene
+  model-switch
+  xrextras-gesture-detector
+  landing-page
+  xrextras-loading
+  xrextras-runtime-error
+  xrweb="allowedDevices: any">
+
+  <!-- We can define assets here to be loaded when A-Frame initializes -->
+  <a-assets>
+    <a-asset-item id="table1" src="./assets/tablestep1.glb"></a-asset-item>
+    <a-asset-item id="table2" src="./assets/tablestep2.glb"></a-asset-item>
+    <a-asset-item id="table3" src="./assets/tablestep3.glb"></a-asset-item>
+    <a-asset-item id="table4" src="./assets/tablestep4.glb"></a-asset-item>
+    <a-asset-item id="table5" src="./assets/tablestep5.glb"></a-asset-item>
+    <a-asset-item id="table6" src="./assets/tablestep6.glb"></a-asset-item>
+    <a-asset-item id="paperairplane1" src="./assets/paperairplane1.glb"></a-asset-item>
+    <a-asset-item id="paperairplane2" src="./assets/paperairplane2.glb"></a-asset-item>
+    <a-asset-item id="paperairplane3" src="./assets/paperairplane3.glb"></a-asset-item>
+    <a-asset-item id="paperairplane4" src="./assets/paperairplane4.glb"></a-asset-item>
+    <a-asset-item id="paperairplane5" src="./assets/paperairplane5.glb"></a-asset-item>
+    <a-asset-item id="paperairplane6" src="./assets/paperairplane6.glb"></a-asset-item>
+  </a-assets>
+
+  <!-- The raycaster will emit mouse events on scene objects specified with the cantap class -->
+  <a-camera
+    id="camera"
+    position="0 8 8"
+    raycaster="objects: .cantap"
+    cursor="
+      fuse: false;
+      rayOrigin: mouse;">
+  </a-camera>
+
+  <a-entity
+      light="type: directional;
+         intensity: 0.8;
+         castShadow: true;
+         shadowMapHeight:2048;
+         shadowMapWidth:2048;
+         shadowCameraTop: 10;
+         target: #model;"
+      position="1 4.3 2.5"
+      xrextras-attach="target: model; offset: 1 15 3;"
+      shadow>
+  </a-entity>
+
+  <a-light type="ambient" intensity="1"></a-light>
+
+  <a-entity
+    id="model"
+    gltf-model="#mixamoModel"
+    class="cantap"
+    scale=".2 .2 .2"
+    xrextras-hold-drag 
+    xrextras-two-finger-rotate
+    xrextras-pinch-scalew
+    shadow>
+  </a-entity>
+
+  <a-plane id="ground" position="0 0 0" rotation="-90 0 0" width="50" height="50" material="shader: shadow" shadow></a-plane>
+</a-scene>
+
